@@ -1,20 +1,21 @@
+import { Card } from "../cards/Card"
 
-export const GridGallery = (categoria) => {
+export const GridGallery = ({category}) => {
 
     const dataFetch = [
         {
             id:1,
-            nombre: 'foto1',
+            nombre: 'Foto1',
             autor: 'Pepe'
         },
         {
             id:2,
-            nombre: 'foto2',
+            nombre: 'Foto2',
             autor: 'Pepon'
         },
         {
             id:3,
-            nombre: 'foto3',
+            nombre: 'Foto3',
             autor: 'Pepito'
         }
     ]
@@ -22,17 +23,13 @@ export const GridGallery = (categoria) => {
 
   return (
     <>
-    <h2 key={category}>{category}</h2>
-        <section>
+        <h2 class="h2">{category}</h2>
+        <section class="box">
         {
             dataFetch.map(({id, nombre, autor})=>(
-                                        
-                <article key={id}>
-                    <h3>{nombre}</h3>
-                    <h3>{autor}</h3>
-                </article>
+                <Card key={id} id={id} nombre={nombre} autor={autor}/>                     
             ))
-            }
+        }
         </section>
     </>
   )
