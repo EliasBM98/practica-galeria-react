@@ -13,8 +13,6 @@ function App() {
 
       <Gallery/>
 
-    
-
     </main>
 
     <footer className="container">

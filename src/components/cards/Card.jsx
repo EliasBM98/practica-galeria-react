@@ -1,9 +1,15 @@
+import './cards.css'
 
-export const Card = ({id, nombre, autor}) => {
+export const Card = ({id,
+                      photographer,
+                      photographer_url,
+                      alt,
+                      src}) => {
   return (
     <article key={id}>
-        <h3>{nombre}</h3>
-        <h3>{autor}</h3>
+        <div><img src={src} alt={alt} /></div>
+        <h3 className="h3_1">{photographer}</h3>
+        <h3 className="h3_2">{photographer_url}</h3>
     </article>
   )
 }
